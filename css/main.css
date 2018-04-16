@@ -417,19 +417,19 @@ h3, h4 {
 }
 
 .vote-up {
-  background: url("/img/reddit_vote_up.png");
+  background: url("../img/reddit_vote_up.png");
 }
 
 .voted-up {
-  background: url("/img/reddit_voted_up.png");
+  background: url("../img/reddit_voted_up.png");
 }
 
 .vote-down {
-  background: url("/img/reddit_vote_down.png");
+  background: url("../img/reddit_vote_down.png");
 }
 
 .voted-down {
-  background: url("/img/reddit_voted_down.png");
+  background: url("../img/reddit_voted_down.png");
 }
 
 .filters {
