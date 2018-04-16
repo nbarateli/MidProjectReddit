@@ -35,3 +35,15 @@ function getPicture($post) {
             return 'img/reddit_post_text.png';
     }
 }
+
+function getCommunityList() {
+    $content = file_get_contents('database/reddit-communities.json');
+    $communities = json_decode($content);
+    $result = [[], []];
+    $c = count($communities);
+    for ($i = 0; $i < $c / 2; $i++)
+        array_push($result[0], $communities[$i]);
+    for ($i = $c / 2; $i < $c; $i++)
+        array_push($result[1], $communities[$i]);
+    return $result;
+}

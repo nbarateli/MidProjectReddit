@@ -38,19 +38,20 @@ include_once "utils.php"
     <h1>Customize Your Reddit</h1>
     <ul id="checklist-1" class="filters">
         <?php
+        $communities = getCommunityList();
 
-        for ($i = 0; $i < 5; $i++) {
+        foreach ($communities[0] as $community) {
 
             ?>
-          <li><input type="checkbox"> nikora</li>
+          <li><input type="checkbox"> <?= $community ?></li>
             <?php
         }
         ?>
     </ul>
     <ul id="checklist-2" class="filters">
-        <?php for ($i = 0; $i < 5; $i++) {
+        <?php foreach ($communities[1] as $community) {
             ?>
-          <li><input type="checkbox"> nikora <?= rand(20, 200000000) ?></li>
+          <li><input type="checkbox"> <?= $community ?></li>
             <?php
         }
         ?>
