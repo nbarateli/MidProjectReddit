@@ -1,4 +1,37 @@
-<?php use  Reddit\Entry; ?>
+<?php
+
+function getSub($path) {
+
+    $tokens = strtok($path, '/');
+    return strtok('/');
+
+}
+
+function getWebsite($url) {
+    if (strlen($url) < 1) return "";
+    $parsed = parse_url($url);
+    if (!strcasecmp($parsed['host'], "www.reddit.com"))
+        return "self." . getSub($parsed['path']);
+    return $parsed['host'];
+}
+
+function getPicture($post) {
+    if ($post->image != null) return $post->image;
+    switch (strtoupper($post->type)) {
+        case 'LINK':
+            return 'img/reddit_post_link.png';
+        case 'MEDIA':
+            return 'img/reddit_post_media.png';
+        case 'NSFW':
+            return 'img/reddit_post_nsfw.png';
+        case 'R':
+            return 'img/reddit_post_r.png';
+        default:
+            return 'img/reddit_post_text.png';
+    }
+}
+
+?>
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -78,16 +111,26 @@
 <!-- Add your site or application content here -->
 <div id="content">
   <p>Hello world! This is HTML5 Boilerplate.</p>
-    <?php for ($i = 0; $i < 10; $i++) {
+    <?php
+    $content = file_get_contents("database/reddit.json");
+    $reddit = json_decode($content);
+    usort($reddit, function ($a, $b) {
+        return $b->up - $a->up;
+    });
+    $i = 0;
+    foreach ($reddit as $post) {
+//        $post = new Entry();
         ?>
       <div class="post">
-        <div class="rank">1</div>
-        <div class="vote">up<br>down</div>
+        <div class="rank"><?= ++$i ?></div>
+        <div class="vote"><?= $post->up ?><br>down</div>
+        <div class="post-image">
+          <img src="<?= getPicture($post) ?>">
+        </div>
         <div class="post-content">
           <div class="title">
-            <h3><a href="/">British Mercenary in Equatorial Guineain Equatorial Guineain Equatorial Guineain Equatorial
-                Guineain Equatorial Guineain Equatorial Guineain Equatorial Guinea</a>
-              <small class="source">(smh.com.au)</small>
+            <h3><a href="/"><?= $post->title ?></a>
+              <small class="source">(<?= getWebSite($post->url) ?>)</small>
             </h3>
           </div>
           <div class="details" style="clear: both">
@@ -96,7 +139,6 @@
             <small><b> 218 comments save hide report </b></small>
           </div>
         </div>
-
       </div>
         <?php
     } ?>
