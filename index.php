@@ -1,3 +1,4 @@
+<?php use  Reddit\Entry; ?>
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -33,7 +34,10 @@
   <div id="customize" class="side">
     <h1>Customize Your Reddit</h1>
     <ul id="checklist-1">
-        <?php for ($i = 0; $i < 5; $i++) {
+        <?php
+
+        for ($i = 0; $i < 5; $i++) {
+
             ?>
           <li><input type="checkbox"> nikora</li>
             <?php
@@ -43,7 +47,7 @@
     <ul id="checklist-2">
         <?php for ($i = 0; $i < 5; $i++) {
             ?>
-          <li><input type="checkbox"> nikora</li>
+          <li><input type="checkbox"> nikora <?= rand(20, 200000000) ?></li>
             <?php
         }
         ?>
@@ -74,6 +78,28 @@
 <!-- Add your site or application content here -->
 <div id="content">
   <p>Hello world! This is HTML5 Boilerplate.</p>
+    <?php for ($i = 0; $i < 10; $i++) {
+        ?>
+      <div class="post">
+        <div class="rank">1</div>
+        <div class="vote">up<br>down</div>
+        <div class="post-content">
+          <div class="title">
+            <h3><a href="/">British Mercenary in Equatorial Guineain Equatorial Guineain Equatorial Guineain Equatorial
+                Guineain Equatorial Guineain Equatorial Guineain Equatorial Guinea</a>
+              <small class="source">(smh.com.au)</small>
+            </h3>
+          </div>
+          <div class="details" style="clear: both">
+            <small>submitted 21 minutes ago by <a href="#">jimbecile</a> tagged <a href="">tag1</a></small>
+            <br>
+            <small><b> 218 comments save hide report </b></small>
+          </div>
+        </div>
+
+      </div>
+        <?php
+    } ?>
 </div>
 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
