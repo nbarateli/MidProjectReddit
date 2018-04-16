@@ -59,14 +59,14 @@
     <div id="submit" class="side">
       <div class="logo"><img class="logo" src="img/reddit_submit.png"></div>
       <div class="side-content">
-        <a href="#">Submit a link >></a><br>
+        <a href="#"><h4>Submit a link >></h4></a><br>
         to anything interesting: news article, blog, entry, video, picture...
       </div>
     </div>
     <div id="create" class="side">
       <div class="logo"><img class="logo" src="img/reddit_create.png"></div>
       <div class="side-content">
-        <a href="#">Create your own reddit >></a>
+        <a href="#"><h4>Create your own reddit >></h4></a>
         <br>
         ...because you love freedom.
         <br>

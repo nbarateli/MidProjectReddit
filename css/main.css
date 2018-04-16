@@ -12,7 +12,7 @@
 
 html {
   color: #222;
-  font-size: 0.7em;
+  font-size: 0.75em;
   line-height: 1.4;
   font-family: Verdana, serif;
 }
@@ -387,7 +387,7 @@ a {
   float: left;
 }
 
-h3 {
-  margin: 0px;
-  padding: 0px;
+h3, h4 {
+  margin: 0;
+  padding: 0;
 }
