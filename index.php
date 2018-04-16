@@ -52,6 +52,26 @@
     <div id="popular">
       <h1>Popular Tags</h1>
     </div>
+    <div id="submit" class="side">
+      <div class="logo"><img src="img/reddit_submit.png"></div>
+      <div class="side-content">
+        <a href="#">Submit a link >></a>
+        <br>
+        to anything interesting: news article, blog entry, video, picture..
+        <br>
+        ..
+      </div>
+    </div>
+    <div id="create" class="side">
+      <div class="logo"><img class="logo" src="img/reddit_create.png"></div>
+      <div class="side-content">
+        <a href="#">Create your own reddit >></a>
+        <br>
+        ...because you love freedom.
+        <br>
+        ...for your WoW guild.
+      </div>
+    </div>
   </div>
 </div>
 <!-- Add your site or application content here -->

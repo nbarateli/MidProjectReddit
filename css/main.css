@@ -296,6 +296,7 @@ textarea {
 
 a {
   color: #369;
+  text-decoration: none;
 }
 
 .menu-item-selected {
@@ -317,6 +318,7 @@ a {
 .side {
   border: 1px dashed;
   padding: 5px;
+  overflow: hidden;
   margin: 5px 5px 0 0;
 }
 
@@ -331,9 +333,18 @@ a {
 
 #customize {
   margin-bottom: 5px;
-overflow: hidden;
+
 }
 
 #popular {
   clear: both;
+}
+
+.logo {
+  float: left;
+  margin-right: 5px;
+}
+
+.side-content {
+  float: left;
 }
