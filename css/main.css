@@ -375,13 +375,6 @@ a {
   width: 2%;
 }
 
-.vote {
-  float: left;
-  margin-top: 20px;
-  margin-right: 5px;
-  width: 3%;
-}
-
 .post-content {
   width: 75%;
   float: left;
@@ -402,4 +395,39 @@ h3, h4 {
   width: 70px;
   height: 70px;
   object-fit: cover;
+}
+
+.vote {
+  float: left;
+  margin-top: 20px;
+  margin-right: 5px;
+  width: 3%;
+  align-content: center;
+}
+
+.vote-arrow {
+  margin: 2px 0 2px 0;
+  height: 14px;
+  width: 15px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  display: block;
+  outline: none;
+  float: right;
+}
+
+.vote-up {
+  background: url("/img/reddit_vote_up.png");
+}
+
+.voted-up {
+  background: url("/img/reddit_voted_up.png");
+}
+
+.vote-down {
+  background: url("/img/reddit_vote_down.png");
+}
+
+.voted-down {
+  background: url("/img/reddit_voted_down.png");
 }
