@@ -66,7 +66,7 @@ function getPicture($post) {
 <div id="side" class="side">
   <div id="customize" class="side">
     <h1>Customize Your Reddit</h1>
-    <ul id="checklist-1">
+    <ul id="checklist-1" class="filters">
         <?php
 
         for ($i = 0; $i < 5; $i++) {
@@ -77,7 +77,7 @@ function getPicture($post) {
         }
         ?>
     </ul>
-    <ul id="checklist-2">
+    <ul id="checklist-2" class="filters">
         <?php for ($i = 0; $i < 5; $i++) {
             ?>
           <li><input type="checkbox"> nikora <?= rand(20, 200000000) ?></li>
@@ -112,7 +112,7 @@ function getPicture($post) {
 <div id="content">
   <p>Hello world! This is HTML5 Boilerplate.</p>
     <?php
-    $content = file_get_contents("database/reddit.json");
+    $content = file_get_contents("database/reddit-posts.json");
     $reddit = json_decode($content);
     usort($reddit, function ($a, $b) {
         return $b->up - $a->up;
@@ -123,7 +123,11 @@ function getPicture($post) {
         ?>
       <div class="post">
         <div class="rank"><?= ++$i ?></div>
-        <div class="vote"><?= $post->up ?><br>down</div>
+        <div class="vote">
+          <div class="vote-arrow vote-up"></div>
+            <?= $post->up ?><br>
+          <div class="vote-arrow vote-down"></div>
+        </div>
         <div class="post-image">
           <img src="<?= getPicture($post) ?>">
         </div>
@@ -133,7 +137,7 @@ function getPicture($post) {
               <small class="source">(<?= getWebSite($post->url) ?>)</small>
             </h3>
           </div>
-          <div class="details" style="clear: both">
+          <div class="details">
             <small>submitted 21 minutes ago by <a href="#">jimbecile</a> tagged <a href="">tag1</a></small>
             <br>
             <small><b> 218 comments save hide report </b></small>
