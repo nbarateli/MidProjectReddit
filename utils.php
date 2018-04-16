@@ -47,3 +47,11 @@ function getCommunityList() {
         array_push($result[1], $communities[$i]);
     return $result;
 }
+
+function getTags($tags) {
+    $result = "";
+    for ($i = 0; $i < count($tags); $i++) {
+        $result .= (" <a href='/'>" . $tags[$i] . "</a>") . ($i < count($tags) - 1 ? ',' : '');
+    }
+    return $result;
+}

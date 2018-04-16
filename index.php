@@ -7,10 +7,10 @@ include_once "utils.php"
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
+  <title>reddit: the front page of the internet</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <title>reddit: the front page of the internet</title>
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
@@ -109,7 +109,10 @@ include_once "utils.php"
             </h3>
           </div>
           <div class="details">
-            <small>submitted 21 minutes ago by <a href="#">jimbecile</a> tagged <a href="">tag1</a></small>
+            <small>submitted 21 minutes ago by <a
+                      href="https://reddit.com/user<?= $post->author ?> ">
+                    <?= $post->author ?>
+              </a> tagged: <?= getTags($post->tags) ?></small>
             <br>
             <small><b> 218 comments save hide report </b></small>
           </div>
