@@ -313,10 +313,11 @@ a {
 #side {
   float: right;
   border: none;
+  width: 35%;
 }
 
 .side {
-  border: 1px dashed;
+  border: 1px dashed gray;
   padding: 5px;
   overflow: hidden;
   margin: 5px 5px 0 0;
@@ -329,6 +330,15 @@ a {
 
 #checklist-2 {
   float: right;
+}
+
+#content {
+  clear: bottom;
+  float: left;
+  border: 1px solid;
+  width: 60%;
+  margin: 5px 5px;
+
 }
 
 #customize {
@@ -347,4 +357,5 @@ a {
 
 .side-content {
   float: left;
+  width: 85%;
 }

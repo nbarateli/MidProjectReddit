@@ -28,7 +28,7 @@
     <li class="menu-item"><a class="menu-link" href="#">Niko</a></li>
   </ul>
 </div>
-<div id="content"></div>
+
 <div id="side" class="side">
   <div id="customize" class="side">
     <h1>Customize Your Reddit</h1>
@@ -53,13 +53,10 @@
       <h1>Popular Tags</h1>
     </div>
     <div id="submit" class="side">
-      <div class="logo"><img src="img/reddit_submit.png"></div>
+      <div class="logo"><img class="logo" src="img/reddit_submit.png"></div>
       <div class="side-content">
-        <a href="#">Submit a link >></a>
-        <br>
-        to anything interesting: news article, blog entry, video, picture..
-        <br>
-        ..
+        <a href="#">Submit a link >></a><br>
+        to anything interesting: news article, blog, entry, video, picture...
       </div>
     </div>
     <div id="create" class="side">
@@ -75,7 +72,9 @@
   </div>
 </div>
 <!-- Add your site or application content here -->
-<p>Hello world! This is HTML5 Boilerplate.</p>
+<div id="content">
+  <p>Hello world! This is HTML5 Boilerplate.</p>
+</div>
 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
