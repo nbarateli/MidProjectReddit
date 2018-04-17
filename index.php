@@ -86,6 +86,7 @@ include_once "utils.php"
     $content = file_get_contents("database/reddit-posts.json");
     $reddit = json_decode($content);
     usort($reddit, function ($a, $b) {
+
         return $b->up - $a->up;
     });
     $i = 0;
@@ -96,7 +97,7 @@ include_once "utils.php"
         <div class="rank"><?= ++$i ?></div>
         <div class="vote">
           <div class="vote-arrow vote-up"></div>
-            <?= $post->up ?><br>
+          <div class="vote-value"><b><?= countVote($post->up) ?> </b></div>
           <div class="vote-arrow vote-down"></div>
         </div>
         <div class="post-image">
@@ -122,12 +123,12 @@ include_once "utils.php"
     } ?>
 </div>
 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+<script src="js/vendor/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-
+<script src="js/votes.js"></script>
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
     window.ga = function () {

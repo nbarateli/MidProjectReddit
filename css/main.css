@@ -402,18 +402,18 @@ h3, h4 {
   margin-top: 20px;
   margin-right: 5px;
   width: 3%;
-  align-content: center;
+  /*align-content: center;*/
 }
 
 .vote-arrow {
-  margin: 2px 0 2px 0;
+  margin: 2px auto 0 auto;
   height: 14px;
   width: 15px;
   cursor: pointer;
   background-repeat: no-repeat;
   display: block;
   outline: none;
-  float: right;
+  /*float: right;*/
 }
 
 .vote-up {
@@ -436,4 +436,9 @@ h3, h4 {
   list-style-type: none;
 !important;
   padding-left: 10px;
+}
+
+.vote-value {
+  text-align: center;
+  color: #adadad;
 }

@@ -55,3 +55,8 @@ function getTags($tags) {
     }
     return $result;
 }
+
+function countVote($up) {
+    if (strlen(strval($up)) <= 4) return $up;
+    return number_format($up / 1000.0, 1) . "k";
+}
