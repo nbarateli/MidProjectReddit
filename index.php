@@ -26,10 +26,10 @@ include_once "utils.php"
 <div id="header">
   <img src="img/reddit_logo.png">
   <ul class="menu">
-    <li class="menu-item"><a class="menu-link" href="#">Niko</a></li>
-    <li class="menu-item"><a class="menu-link" href="#">Niko</a></li>
-    <li class="menu-item"><a class="menu-link" href="#">Niko</a></li>
-    <li class="menu-item"><a class="menu-link" href="#">Niko</a></li>
+    <li class="menu-item"><a class="menu-link menu-item-selected" href="#"><b>Niko</b></a></li>
+    <li class="menu-item"><a class="menu-link" href="#"><b>Nikora</b></a></li>
+    <li class="menu-item"><a class="menu-link" href="#"><b>Statusebi</b></a></li>
+    <li class="menu-item"><a class="menu-link" href="#"><b>Mee</b></a></li>
   </ul>
 </div>
 
@@ -43,7 +43,7 @@ include_once "utils.php"
         foreach ($communities[0] as $community) {
 
             ?>
-          <li><input type="checkbox"> <?= $community ?></li>
+          <li><label><input type="checkbox"> <?= $community ?></label></li>
             <?php
         }
         ?>
@@ -51,7 +51,7 @@ include_once "utils.php"
     <ul id="checklist-2" class="filters">
         <?php foreach ($communities[1] as $community) {
             ?>
-          <li><input type="checkbox"> <?= $community ?></li>
+          <li><label><input type="checkbox"> <?= $community ?></label></li>
             <?php
         }
         ?>
