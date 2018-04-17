@@ -278,21 +278,30 @@ textarea {
 #header {
   background: #d9f5ff;
   border-bottom: 1px solid #5f99cf;
+  z-index: 100;
+  margin: 0 !important;
+}
+
+#header img {
+  vertical-align: bottom;
+  margin-bottom: 3px;
 }
 
 .menu {
+  float: bottom;
   list-style-type: none;
   white-space: nowrap;
   display: inline-block;
   margin-top: 5px;
   vertical-align: bottom;
-  margin-bottom: 0;
+  margin-bottom: -1px;
   padding: 0;
 }
 
 .menu-item {
   display: inline;
-  margin: 0 4px;
+  overflow: hidden;
+
 }
 
 a {
@@ -303,12 +312,15 @@ a {
 .menu-item-selected {
   color: orangered;
   border: 1px solid #5f99cf;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #eff7ff !important;
+  overflow: hidden;
 }
 
 .menu-link {
   padding: 2px 6px 0 6px;
+  border-bottom: none;
   background-color: #eff7ff;
+
 }
 
 #side {
@@ -319,9 +331,9 @@ a {
 
 .side {
   border: 1px dashed gray;
-  padding: 5px;
+  padding: 5px 0 0 5px;
   overflow: hidden;
-  margin: 5px 5px 0 0;
+  margin: 5px 0 0 0;
 }
 
 #checklist-1 {
@@ -441,4 +453,46 @@ h3, h4 {
 .vote-value {
   text-align: center;
   color: #adadad;
+}
+
+.search {
+  float: right;
+
+  overflow: hidden;
+}
+
+.search input {
+  float: left;
+}
+
+.search button {
+  background-color: lightgray;
+  /*margin-right: 15px;*/
+  border: none;
+  padding: 0;
+  float: left;
+  height: 19px;
+}
+
+.search button img {
+
+}
+
+#userspace {
+  float: top;
+  margin: 0;
+}
+
+#userspace ul {
+  margin: 0 0 0 0;
+}
+
+#userspace ul li {
+  display: inline;
+  font-size: smaller;
+}
+
+#header-right {
+  float: right;
+  margin-top: 2px;
 }

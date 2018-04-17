@@ -31,6 +31,33 @@ include_once "utils.php"
     <li class="menu-item"><a class="menu-link" href="#"><b>Statusebi</b></a></li>
     <li class="menu-item"><a class="menu-link" href="#"><b>Mee</b></a></li>
   </ul>
+  <div id="header-right">
+    <div id="userspace">
+      <ul>
+        <li><a href="#">Nikooo (242)</a></li>
+        |
+        <li><a href="#">Msg</a></li>
+        |
+        <li><a href="#">preferences</a></li>
+        |
+        <li><a href="#">stats</a></li>
+        |
+        <li><a href="#">help</a></li>
+        |
+        <li><a href="#">blog</a></li>
+        |
+        <li><a href="#">logout</a></li>
+
+      </ul>
+    </div>
+    <div class="search">
+      <form action="#">
+        <label><input placeholder="Search" size="29">
+          <button type="submit"><img src="img/reddit_search.png"></button>
+        </label>
+      </form>
+    </div>
+  </div>
 </div>
 
 <div id="side" class="side">
