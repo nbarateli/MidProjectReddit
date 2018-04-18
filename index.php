@@ -15,8 +15,8 @@ include_once "utils.php"
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
 <!--[if lte IE 9]>
