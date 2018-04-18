@@ -16,7 +16,7 @@ include_once "utils.php"
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/normalize.css">
+  <!--  <link rel="stylesheet" href="css/normalize.css">-->
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -52,7 +52,8 @@ include_once "utils.php"
     </div>
     <div class="search">
       <form action="#">
-        <label><input placeholder="Search" size="29">
+        <label>
+          <input placeholder="Search" size="29">
           <button type="submit"><img src="img/reddit_search.png"></button>
         </label>
       </form>
@@ -63,22 +64,18 @@ include_once "utils.php"
 <div id="side" class="side">
   <div id="customize" class="side">
     <h1>Customize Your Reddit</h1>
-    <ul id="checklist-1" class="filters">
+    <ul id="categories" class="filters">
         <?php
         $communities = getCommunityList();
 
-        foreach ($communities[0] as $community) {
-
+        foreach ($communities as $community) {
             ?>
-          <li><label><input type="checkbox"> <?= $community ?></label></li>
-            <?php
-        }
-        ?>
-    </ul>
-    <ul id="checklist-2" class="filters">
-        <?php foreach ($communities[1] as $community) {
-            ?>
-          <li><label><input type="checkbox"> <?= $community ?></label></li>
+          <li>
+            <label class="container"> <?= $community ?>
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+          </li>
             <?php
         }
         ?>

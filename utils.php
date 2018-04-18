@@ -5,14 +5,16 @@
  * Date: 16.04.2018
  * Time: 21:54
  */
-function getSub($path) {
+function getSub($path)
+{
 
     $tokens = strtok($path, '/');
     return strtok('/');
 
 }
 
-function getWebsite($url) {
+function getWebsite($url)
+{
     if (strlen($url) < 1) return "";
     $parsed = parse_url($url);
     if (!strcasecmp($parsed['host'], "www.reddit.com"))
@@ -20,7 +22,8 @@ function getWebsite($url) {
     return $parsed['host'];
 }
 
-function getPicture($post) {
+function getPicture($post)
+{
     if ($post->image != null) return $post->image;
     switch (strtoupper($post->type)) {
         case 'LINK':
@@ -36,19 +39,15 @@ function getPicture($post) {
     }
 }
 
-function getCommunityList() {
-    $content = file_get_contents('database/reddit-communities.json');
-    $communities = json_decode($content);
-    $result = [[], []];
-    $c = count($communities);
-    for ($i = 0; $i < $c / 2; $i++)
-        array_push($result[0], $communities[$i]);
-    for ($i = $c / 2; $i < $c; $i++)
-        array_push($result[1], $communities[$i]);
-    return $result;
+function getCommunityList()
+{
+
+
+    return json_decode(file_get_contents('database/reddit-communities.json'));
 }
 
-function getTags($tags) {
+function getTags($tags)
+{
     $result = "";
     for ($i = 0; $i < count($tags); $i++) {
         $result .= (" <a href='/'>" . $tags[$i] . "</a>") . ($i < count($tags) - 1 ? ',' : '');
@@ -56,7 +55,8 @@ function getTags($tags) {
     return $result;
 }
 
-function countVote($up) {
+function countVote($up)
+{
     if (strlen(strval($up)) <= 4) return $up;
     return number_format($up / 1000.0, 1) . "k";
 }
