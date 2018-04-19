@@ -341,9 +341,9 @@ a {
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
-  -webkit-column-gap: 100px;
-  -moz-column-gap: 100px;
-  column-gap: 100px;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
 }
 
 /* The container */
