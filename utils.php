@@ -103,8 +103,8 @@ function build_array($tags, &$result) {
 
 function getRank($z) {
     if ($z >= 2.0) return 'very-popular';
-    if ($z >= 1.25) return 'popular';
-    if ($z >= 0.75) return 'somewhat-popular';
+    if ($z >= 1.0) return 'popular';
+    if ($z >= 0.5) return 'somewhat-popular';
     return 'not-popular';
 
 }

@@ -86,6 +86,7 @@ include_once "utils.php"
         <?php
         $tags = getTags(json_decode(file_get_contents('database/reddit-posts.json')));
         foreach ($tags as $tag) {
+            if ($tag['count'] < 2 && rand(0, 1) == 1) continue;
             ?>
           <span class="<?= getRank($tag['z']) ?>"><?= $tag['tag'] ?></span>
             <?php
