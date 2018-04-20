@@ -146,7 +146,8 @@ include_once "utils.php"
             <small>submitted 21 minutes ago by <a
                       href="https://reddit.com/user<?= $post->author ?> ">
                     <?= $post->author ?>
-              </a> tagged: <?= renderTags($post->tags) ?></small>
+              </a> tagged: <?= renderTags($post->tags) ?>
+            </small>
             <br>
             <small><b> 218 comments save hide report </b></small>
           </div>

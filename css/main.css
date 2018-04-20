@@ -282,6 +282,9 @@ textarea {
   margin: 0 !important;
 }
 
+body {
+  margin: 0 5px 0 5px;
+}
 #header img {
   vertical-align: bottom;
   margin-bottom: 3px;
