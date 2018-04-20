@@ -81,8 +81,16 @@ include_once "utils.php"
         ?>
     </ul>
 
-    <div id="popular">
+    <div id="popular-tags">
       <h1>Popular Tags</h1>
+        <?php
+        $tags = getTags(json_decode(file_get_contents('database/reddit-posts.json')));
+        foreach ($tags as $tag) {
+            ?>
+          <span class="<?= getRank($tag['z']) ?>"><?= $tag['tag'] ?></span>
+            <?php
+        }
+        ?>
     </div>
     <div id="submit" class="side">
       <div class="logo"><img class="logo" src="img/reddit_submit.png"></div>
@@ -137,7 +145,7 @@ include_once "utils.php"
             <small>submitted 21 minutes ago by <a
                       href="https://reddit.com/user<?= $post->author ?> ">
                     <?= $post->author ?>
-              </a> tagged: <?= getTags($post->tags) ?></small>
+              </a> tagged: <?= renderTags($post->tags) ?></small>
             <br>
             <small><b> 218 comments save hide report </b></small>
           </div>

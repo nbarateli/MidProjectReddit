@@ -423,11 +423,36 @@ a {
 
 #customize {
   margin-bottom: 5px;
+}
+
+#popular-tags {
+  clear: both;
+}
+
+#popular-tags span {
+  font-weight: bold;
+  margin: 0 2px 0 2px;
+  color: #369;
+}
+
+#popular-tags span:hover {
+  cursor: pointer;
+}
+
+.very-popular {
+  font-size: x-large;
+}
+
+.popular {
+  font-size: large;
+}
+
+.somewhat-popular {
 
 }
 
-#popular {
-  clear: both;
+.not-popular {
+  font-size: small
 }
 
 .logo {
@@ -438,6 +463,10 @@ a {
 .side-content {
   float: left;
   width: 80%;
+}
+
+.source {
+  font-size: x-small;
 }
 
 .post {
