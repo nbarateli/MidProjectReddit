@@ -275,54 +275,68 @@ textarea {
   }
 }
 
-#header {
-  background: #d9f5ff;
-  border-bottom: 1px solid #5f99cf;
-  z-index: 100;
-  margin: 0 !important;
-}
-
-body {
-  margin: 0 5px 0 5px;
-}
-#header img {
-  vertical-align: bottom;
-  margin-bottom: 3px;
-}
-
-.menu {
-  float: bottom;
-  list-style-type: none;
-  white-space: nowrap;
-  display: inline-block;
-  margin-top: 5px;
-  vertical-align: bottom;
-  margin-bottom: 1px;
-  padding: 0;
-}
-
-.menu-item {
-  display: inline;
-  overflow: hidden;
-
-}
-
 a {
   color: #369;
   text-decoration: none;
 }
 
+#header {
+  position: fixed;
+  top: 0;
+  background: #d9f5ff;
+  border-bottom: 1px solid #5f99cf;
+  z-index: 100;
+  width: 100%;
+  margin: 0 !important;
+  overflow: hidden;
+}
+
+#header:after {
+  clear: both;
+}
+
+body {
+  margin: 0 5px 0 5px;
+}
+
+#header img {
+  vertical-align: bottom;
+  margin-bottom: 3px;
+  display: inline-block;
+}
+
+.menu {
+  position: relative;
+  bottom: 0;
+  /*float: left;*/
+  list-style-type: none;
+  white-space: nowrap;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 20px;
+  vertical-align: bottom;
+  margin-bottom: -1px;
+  padding: 0;
+
+}
+
+.menu-item {
+  /*position: fixed;*/
+  display: inline;
+}
+
 .menu-item-selected {
   color: orangered;
   border: 1px solid #5f99cf;
-  border-bottom: 1px solid #eff7ff !important;
+  border-bottom: 1px solid white !important;
   overflow: hidden;
 }
 
 .menu-link {
-  padding: 2px 6px 0 6px;
-  border-bottom: 1px solid #5f99cf;;
+  padding: 0px 6px 0 6px;
+  border-bottom: 1px solid #5f99cf;
   background-color: #eff7ff;
+  position: relative;
 
 }
 
@@ -349,70 +363,9 @@ a {
   column-gap: 10px;
 }
 
-/* The container */
-.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 10pt;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+#wrapper {
+  margin: 44px 5px auto 0;
+  overflow: hidden;
 }
 
 #content {
@@ -420,7 +373,6 @@ a {
   float: left;
   /*border: 1px solid;*/
   width: 70%;
-  margin: 5px 5px;
 
 }
 
@@ -481,9 +433,11 @@ a {
 
 .rank {
   float: left;
-  margin-top: 20px;
+  margin-top: 33px;
   margin-right: 5px;
   width: 2%;
+  vertical-align: center;
+
 }
 
 .post-content {
@@ -594,4 +548,11 @@ h3, h4 {
 #header-right {
   float: right;
   margin-top: 2px;
+  margin-right: 10px;
+}
+
+.header-left {
+  float: left;
+  overflow: hidden;
+
 }
