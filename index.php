@@ -16,8 +16,8 @@ include_once "utils.php"
   <!-- Place favicon.ico in the root directory -->
   <link rel="shortcut icon" href="favicon.ico"/>
 
-  <link rel="stylesheet" href="css/main.css">
-  <!--    <link rel="stylesheet" href="css/normalize.css">-->
+  <link rel="stylesheet" href="css/main.css" charset="UTF-8">
+  <!--    <link rel="stylesheet" charset="UTF-8"href="css/normalize.css">-->
 </head>
 <body>
 <!--[if lte IE 9]>
