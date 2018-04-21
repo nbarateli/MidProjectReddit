@@ -163,13 +163,12 @@ include_once "utils.php"
   </div>
   <!-- Add your site or application content here -->
 </div>
-<script src="js/vendor/modernizr-3.5.0.min.js"></script>
-<script src="js/vendor/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="js/vendor/modernizr-3.5.0.min.js" type="text/javascript" charset="UTF-8"></script>
+<script src="js/vendor/jquery-3.2.1.min.js" type="text/javascript" charset="UTF-8"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-<script src="js/votes.js"></script>
+<script src="js/plugins.js" type="text/javascript" charset="UTF-8"></script>
+<script src="js/main.js" type="text/javascript" charset="UTF-8"></script>
+<script src="js/votes.js" type="text/javascript" charset="UTF-8"></script>
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
     window.ga = function () {
@@ -180,6 +179,6 @@ include_once "utils.php"
     ga('create', 'UA-XXXXX-Y', 'auto');
     ga('send', 'pageview')
 </script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+<script src="https://www.google-analytics.com/analytics.js" async defer type="text/javascript" charset="UTF-8"></script>
 </body>
 </html>
