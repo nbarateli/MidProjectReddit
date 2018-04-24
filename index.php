@@ -1,5 +1,5 @@
 <?php
-
+mb_internal_encoding("UTF-8");
 include_once "utils.php"
 ?>
 <!doctype html>
@@ -70,7 +70,7 @@ include_once "utils.php"
           } ?>
       </ul>
     </div>
-    <div id="edit-link"><a href=".">EDIT »</a></div>
+    <div id="edit-link"><a href=".">EDIT <?= "»" ?></a></div>
   </div>
   <div id="header-lower">
     <div class="header-left">
