@@ -280,26 +280,25 @@ a {
   text-decoration: none;
 }
 
-#header {
-  position: fixed;
+#header-lower {
   top: 0;
+  padding-left: 5px;
+  white-space: nowrap;
   background: #d9f5ff;
   border-bottom: 1px solid #5f99cf;
-  z-index: 100;
-  width: 100%;
   margin: 0 !important;
   overflow: hidden;
 }
 
-#header:after {
+#header-lower:after {
   clear: both;
 }
 
 body {
-  margin: 0 5px 0 5px;
+  margin: 0 0px 0 5px;
 }
 
-#header img {
+#header-lower img {
   vertical-align: bottom;
   margin-bottom: 3px;
   display: inline-block;
@@ -363,8 +362,13 @@ body {
   column-gap: 10px;
 }
 
+#categories label {
+  cursor: pointer;
+  color: #5f99cf;
+  font-weight: bolder;
+}
 #wrapper {
-  margin: 44px 5px auto 0;
+  margin: 63px 5px auto 0;
   overflow: hidden;
 }
 
@@ -556,3 +560,114 @@ h3, h4 {
   overflow: hidden;
 
 }
+
+#header {
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+#top-header {
+  padding-left: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #7d7d7d;
+}
+
+#top-header li, #links, #subs, #my-subs, #top-header button {
+  display: inline;
+  font-size: 10px;
+  font-weight: 400;
+
+}
+
+#my-subs {
+  padding-right: 21px;
+  float: left;
+  overflow: hidden;
+}
+
+#subs {
+  /*float: left;*/
+  margin-right: 10px;
+
+}
+
+#subs ul {
+  padding-left: 0;
+  line-height: 18px;
+  display: inline;
+  white-space: nowrap
+}
+
+#edit-link {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  padding: 0 5px 0 15px;
+
+  height: 18px;
+  background-color: #f0f0f0;
+}
+
+#edit-link a {
+  font-size: 90%;
+  font-weight: bold;
+
+}
+
+#top-header a {
+  color: black;
+}
+
+/** DROPDOWN CSS*/
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  /*font-size: 16px;*/
+  border: none;
+  outline: none;
+  /*color: white;*/
+  /*padding: 14px 16px;*/
+  background-color: inherit;
+  /*font-family: inherit;*/
+  /*margin: 0;*/
+}
+
+#my-subs a:hover {
+  background-color: #c7def7;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 115px;
+  /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  /*padding: 12px 16px;*/
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/**----END DROPDOWN*/

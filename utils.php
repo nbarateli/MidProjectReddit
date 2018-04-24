@@ -38,7 +38,7 @@ function getPicture($post) {
 
 function getCommunityList() {
 
-    return json_decode(file_get_contents('database/reddit-communities.json'));
+    return (json_decode(file_get_contents('database/reddit.json')))->communities;
 }
 
 function renderTags($tags) {
@@ -124,4 +124,16 @@ function getTags($reddit) {
     $result = [];
     build_array($tags, $result);
     return $result;
+}
+
+function getLinks() {
+    return (json_decode(file_get_contents('database/reddit.json')))->links;
+}
+
+function getSubs() {
+    return (json_decode(file_get_contents('database/reddit.json')))->subs;
+}
+
+function getMySubs() {
+    return (json_decode(file_get_contents('database/reddit.json')))->my_subs;
 }

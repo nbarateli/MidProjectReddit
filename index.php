@@ -26,48 +26,96 @@ include_once "utils.php"
   your browser</a> to improve your experience and security.</p>
 <![endif]-->
 <div id="header">
-  <div class="header-left">
-    <img src="img/reddit_logo.png">
-    <ul class="menu">
-      <li class="menu-item"><a class="menu-link menu-item-selected" href="#"><b>Niko</b></a></li>
-      <li class="menu-item"><a class="menu-link" href="#"><b>Nikora</b></a></li>
-      <li class="menu-item"><a class="menu-link" href="#"><b>Statusebi</b></a></li>
-      <li class="menu-item"><a class="menu-link" href="#"><b>Mee</b></a></li>
-    </ul>
-  </div>
-
-  <div id="header-right">
-    <div id="userspace">
-      <ul>
-        <li><a href="#">Nikooo (242)</a></li>
-        |
-        <li><a href="#">Msg</a></li>
-        |
-        <li><a href="#">preferences</a></li>
-        |
-        <li><a href="#">stats</a></li>
-        |
-        <li><a href="#">help</a></li>
-        |
-        <li><a href="#">blog</a></li>
-        |
-        <li><a href="#">logout</a></li>
-
+  <div id="top-header">
+    <div id="my-subs">
+      <div class="dropdown">
+        <button class="dropbtn">MY SUBREDDITS <img style="height: 12px" src="img/droparrowgray.gif">
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <?php $my_subs = getMySubs();
+            foreach ($my_subs as $my_sub) {
+                ?>
+              <a href="."><?= $my_sub ?></a>
+            <?php } ?>
+        </div>
+      </div>
+    </div>
+    <div id="links">
+        <?php
+        $links = getLinks();
+        $first = array_shift($links);
+        ?>
+      <a href="."><?= strtoupper($first) ?></a>
+        <?php
+        foreach ($links
+                 as $link) {
+            ?>
+          - <a href="."><?= strtoupper($link) ?></a> <?php
+        } ?>
+    </div>
+    |
+    <div id="subs">
+      <ul><?php
+          $links = getSubs();
+          $first = array_shift($links);
+          ?>
+        <li><a href="."><?= strtoupper($first) ?></a></li>
+          <?php
+          foreach ($links
+                   as $link) {
+              ?>
+            -
+            <li><a href="."><?= strtoupper($link) ?></a></li> <?php
+          } ?>
       </ul>
     </div>
-    <div class="search">
-      <form action="#">
-        <label>
-          <input placeholder="Search" size="29">
-          <button type="submit"><img src="img/reddit_search.png"></button>
-        </label>
-      </form>
+    <div id="edit-link"><a href=".">EDIT »</a></div>
+  </div>
+  <div id="header-lower">
+    <div class="header-left">
+      <img src="img/reddit_logo.png">
+      <ul class="menu">
+        <li class="menu-item"><a class="menu-link menu-item-selected" href="."><b>best</b></a></li>
+        <li class="menu-item"><a class="menu-link" href="."><b>hot</b></a></li>
+        <li class="menu-item"><a class="menu-link" href="."><b>new</b></a></li>
+        <li class="menu-item"><a class="menu-link" href="."><b>rising</b></a></li>
+        <li class="menu-item"><a class="menu-link" href="."><b>controversial</b></a></li>
+      </ul>
+    </div>
+
+    <div id="header-right">
+      <div id="userspace">
+        <ul>
+          <li><a href=".">Nikooo (242)</a></li>
+          |
+          <li><a href=".">Msg</a></li>
+          |
+          <li><a href=".">preferences</a></li>
+          |
+          <li><a href=".">stats</a></li>
+          |
+          <li><a href=".">help</a></li>
+          |
+          <li><a href=".">blog</a></li>
+          |
+          <li><a href=".">logout</a></li>
+
+        </ul>
+      </div>
+      <div class="search">
+        <form action=".">
+          <label>
+            <input placeholder="Search" size="29">
+            <button type="submit"><img src="img/reddit_search.png"></button>
+          </label>
+        </form>
+      </div>
     </div>
   </div>
 </div>
 <div id="wrapper">
   <div id="content">
-    <p>Hello world! This is HTML5 Boilerplate.</p>
       <?php
       $content = file_get_contents("database/reddit-posts.json");
       $reddit = json_decode($content);
@@ -120,9 +168,10 @@ include_once "utils.php"
           foreach ($communities as $community) {
               ?>
             <li>
-              <label class="container"> <?= $community ?>
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
+              <label class="container">
+                <input style="background-color: blue" type="checkbox" checked="checked">
+                  <?= $community ?>
+                <!--                <span class="checkmark"></span>-->
               </label>
             </li>
               <?php
@@ -145,14 +194,14 @@ include_once "utils.php"
       <div id="submit" class="side">
         <div class="logo"><img class="logo" src="img/reddit_submit.png"></div>
         <div class="side-content">
-          <a href="#"><h4>Submit a link >></h4></a><br>
+          <a href="."><h4>Submit a link >></h4></a><br>
           to anything interesting: news article, blog, entry, video, picture...
         </div>
       </div>
       <div id="create" class="side">
         <div class="logo"><img class="logo" src="img/reddit_create.png"></div>
         <div class="side-content">
-          <a href="#"><h4>Create your own reddit >></h4></a>
+          <a href="."><h4>Create your own reddit >></h4></a>
           <br>
           ...because you love freedom.
           <br>
